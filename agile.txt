@@ -1,0 +1,27 @@
+//doing
+
+✔ create Contact:  first name, last name
+
+  birth month, context (biz/personal/family)
+
+  create array list that contains all existing contacts
+
+  create phone class
+
+  create email class
+
+  create mailing addresses class
+
+  add phonenumber(s), email(s), mailing addresses
+
+  select an existing contact VTE functionality: and add information:
+
+
+//done
+
+
+//backlog
+
+separate page for display of contact by context:
+  (ex: display by email address sorted collections.sort)
+  sorted within the object
