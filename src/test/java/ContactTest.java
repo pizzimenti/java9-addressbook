@@ -65,4 +65,12 @@ public class ContactTest {
     assertEquals(testContact2, Contact.getContactByID(2));
   }
 
+  // @Test
+  // public void getPhoneByID_returnsSpecificPhoneNumber_true() {
+  //   PhoneNumber testPhone = new PhoneNumber("503-555-1212", "mobile");
+  //   PhoneNumber testPhone2 = new PhoneNumber("503-555-7777", "home");
+  //   PhoneNumber testPhone3 = new PhoneNumber("503-555-9999", "business");
+  //   assertEquals(testPhone2, PhoneNumber.getPhoneByID(2));
+  // }
+
 } //end of ContactTest

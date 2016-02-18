@@ -41,6 +41,13 @@ public class Contact {
     return mPhoneList;
   }
 
+  // public PhoneNumber getPhoneByID(int id){
+  //   for (int i; i <= counter; i++) {
+  //     if( id ==)
+  //   }
+  // }
+
+
   //Setters and Getters for Contact
 
   public String fullName() {
