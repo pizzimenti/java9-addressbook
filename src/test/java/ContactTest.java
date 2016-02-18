@@ -1,10 +1,11 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 
+
 public class ContactTest {
 
-  // @Rule
-  // public ClearRule clearRule = new ClearRule();
+  @Rule
+  public ClearRule clearRule = new ClearRule();
 
   @Test
   public void Contact_instantiatesCorrectly_true() {
@@ -47,5 +48,21 @@ public class ContactTest {
     testContact.addPhoneNumber(testPhone);
     assertTrue(testContact.getPhoneNumbers().contains(testPhone));
   }
+
+  @Test
+  public void getID_returnsIDForSpecificContact_true() {
+    Contact testContact1 = new Contact("Mary","Smith");
+    Contact testContact2 = new Contact("John","Smith");
+    Contact testContact3 = new Contact("Bob","Dole");
+    assertEquals(2, testContact2.getID());
+  }
+
+  // @Test
+  // public void getContactByID_returnsSpecificContact_true() {
+  //   Contact testContact1 = new Contact("Mary","Smith");
+  //   Contact testContact2 = new Contact("John","Smith");
+  //   Contact testContact3 = new Contact("Bob","Dole");
+  //   assertThat(testContact2, Contact.getByID(2));
+  // }
 
 } //end of ContactTest

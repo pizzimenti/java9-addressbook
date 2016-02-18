@@ -7,12 +7,18 @@ public class Contact {
   private String mContext;
   private static ArrayList<Contact> contactList = new ArrayList<Contact>();
   private ArrayList<PhoneNumber> mPhoneList;
+  private int mID;
 
   public Contact (String firstName, String lastName) {
     mFirstName = firstName;
     contactList.add(this);
     mLastName = lastName;
     mPhoneList = new ArrayList<PhoneNumber>();
+    mID = contactList.size();
+  }
+
+  public int getID() {
+    return mID;
   }
 
   public static ArrayList<Contact> all() {
@@ -26,8 +32,12 @@ public class Contact {
   public ArrayList<PhoneNumber> getPhoneNumbers() {
     return mPhoneList;
   }
+  //
+  // public Contact getByID (int id) {
+  //   try { contactList}
+  // }
 
-  //Setters and Getters
+  //Setters and Getters for Contact
 
   public String fullName() {
     return mFirstName + " " + mLastName;
@@ -47,6 +57,11 @@ public class Contact {
 
   public String getContext() {
     return mContext;
+  }
+  //clearRule
+
+  public static void clear() {
+    contactList.clear();
   }
 
 } //end of Contact Class
