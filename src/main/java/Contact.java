@@ -21,6 +21,14 @@ public class Contact {
     return mID;
   }
 
+  public static Contact getContactByID (int id) {
+    try {
+      return contactList.get(id-1);
+    } catch (IndexOutOfBoundsException ex) {
+      return null;
+    }
+  }
+
   public static ArrayList<Contact> all() {
     return contactList;
   }
@@ -32,10 +40,6 @@ public class Contact {
   public ArrayList<PhoneNumber> getPhoneNumbers() {
     return mPhoneList;
   }
-  //
-  // public Contact getByID (int id) {
-  //   try { contactList}
-  // }
 
   //Setters and Getters for Contact
 

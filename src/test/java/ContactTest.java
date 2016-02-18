@@ -57,12 +57,12 @@ public class ContactTest {
     assertEquals(2, testContact2.getID());
   }
 
-  // @Test
-  // public void getContactByID_returnsSpecificContact_true() {
-  //   Contact testContact1 = new Contact("Mary","Smith");
-  //   Contact testContact2 = new Contact("John","Smith");
-  //   Contact testContact3 = new Contact("Bob","Dole");
-  //   assertThat(testContact2, Contact.getByID(2));
-  // }
+  @Test
+  public void getContactByID_returnsSpecificContact_true() {
+    Contact testContact1 = new Contact("Mary","Smith");
+    Contact testContact2 = new Contact("John","Smith");
+    Contact testContact3 = new Contact("Bob","Dole");
+    assertEquals(testContact2, Contact.getContactByID(2));
+  }
 
 } //end of ContactTest
