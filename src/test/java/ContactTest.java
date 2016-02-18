@@ -77,4 +77,27 @@ public class ContactTest {
     assertEquals(testHomePhone, myContactInfo.getPhoneByID(3));
   }
 
+  @Test
+  public void getEmailByID_returnsSpecificEmail_true() {
+    Email myMobileEmail = new Email("me@me.phone", "mobile");
+    Email testWorkEmail = new Email("me@me.work", "business");
+    Email testHomeEmail = new Email("me@me.home", "home");
+    Contact myContactInfo = new Contact("Brad","Smith");
+    myContactInfo.addEmail(testHomeEmail);
+    myContactInfo.addEmail(testWorkEmail);
+    myContactInfo.addEmail(myMobileEmail);
+    assertEquals(testHomeEmail, myContactInfo.getEmailByID(3));
+  }
+
+  @Test
+  public void getAddressByID_returnsSpecificAddress_true() {
+    Address myMobileAddress = new Address("home", "123 Main St", "Porland","OR","97201");
+    Address testWorkAddress = new Address("home", "123 Main St", "Porland","OR","97201");
+    Address testHomeAddress = new Address("home", "123 Main St", "Porland","OR","97201");
+    Contact myContactInfo = new Contact("Brad","Smith");
+    myContactInfo.addAddress(testHomeAddress);
+    myContactInfo.addAddress(testWorkAddress);
+    myContactInfo.addAddress(myMobileAddress);
+    assertEquals(testHomeAddress, myContactInfo.getAddressByID(3));
+  }
 } //end of ContactTest

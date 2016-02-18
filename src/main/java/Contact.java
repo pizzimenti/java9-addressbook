@@ -7,6 +7,8 @@ public class Contact {
   private String mContext;
   private static ArrayList<Contact> contactList = new ArrayList<Contact>();
   private ArrayList<PhoneNumber> mPhoneList;
+  private ArrayList<Email> mEmailList;
+  private ArrayList<Address> mAddressList;
   private int mID;
 
   public Contact (String firstName, String lastName) {
@@ -14,11 +16,17 @@ public class Contact {
     contactList.add(this);
     mLastName = lastName;
     mPhoneList = new ArrayList<PhoneNumber>();
+    mEmailList = new ArrayList<Email>();
+    mAddressList = new ArrayList<Address>();
     mID = contactList.size();
   }
 
   public int getID() {
     return mID;
+  }
+
+  public static ArrayList<Contact> all() {
+    return contactList;
   }
 
   public static Contact getContactByID (int id) {
@@ -29,10 +37,7 @@ public class Contact {
     }
   }
 
-  public static ArrayList<Contact> all() {
-    return contactList;
-  }
-
+  // Phone number handling
   public void addPhoneNumber(PhoneNumber newPhone) {
     mPhoneList.add(newPhone);
   }
@@ -49,7 +54,41 @@ public class Contact {
     }
     return null;
   }
+  //EMail handling
+  public void addEmail(Email newEmail) {
+    mEmailList.add(newEmail);
+  }
 
+  public ArrayList<Email> getEmails() {
+    return mEmailList;
+  }
+
+  public Email getEmailByID(int id){
+    for ( Email emailObject : mEmailList) {
+      if( id == emailObject.getID()) {
+        return emailObject;
+      }
+    }
+    return null;
+  }
+
+  //Address handling
+  public void addAddress(Address newAddress) {
+    mAddressList.add(newAddress);
+  }
+
+  public ArrayList<Address> getAddresss() {
+    return mAddressList;
+  }
+
+  public Address getAddressByID(int id){
+    for ( Address addressObject : mAddressList) {
+      if( id == addressObject.getID()) {
+        return addressObject;
+      }
+    }
+    return null;
+  }
 
   //Setters and Getters for Contact
 
