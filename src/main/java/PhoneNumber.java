@@ -6,4 +6,12 @@ public class PhoneNumber {
     mNumber = number;
     mType = type;
   }
+
+  public String getPhoneNumber() {
+    return mNumber;
+  }
+
+  public void editPhoneNumber(String newNumber) {
+    mNumber = newNumber;
+  }
 }

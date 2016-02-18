@@ -10,7 +10,9 @@
 
 ✔ context (biz/personal/family)
 
-  create phone class
+✔ create phone class
+✔  add getter
+  add setter
 
   create email class
 
