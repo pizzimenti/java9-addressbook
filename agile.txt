@@ -24,7 +24,9 @@
       state
       zip
 
-  select an existing contact VTE functionality: and add information:
+add phone and email objects into contact object
+
+
 
 
 //done
@@ -32,6 +34,7 @@
 
 //backlog
 
+select an existing contact VTE functionality: and add information:
 separate page for display of contact by context:
   (ex: display by email address sorted collections.sort)
   sorted within the object

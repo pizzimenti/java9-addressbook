@@ -40,4 +40,12 @@ public class ContactTest {
     assertEquals("family", testContact.getContext());
   }
 
+  @Test
+  public void addPhoneNumber_addPhoneNumberToContact_returnsArrayListwithNumber() {
+    Contact testContact = new Contact("Mary","Smith");
+    PhoneNumber testPhone = new PhoneNumber("503-555-1212", "mobile");
+    testContact.addPhoneNumber(testPhone);
+    assertTrue(testContact.getPhoneNumbers().contains(testPhone));
+  }
+
 } //end of ContactTest
