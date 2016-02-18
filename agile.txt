@@ -2,9 +2,11 @@
 
 ✔ create Contact:  first name, last name
 
-  birth month, context (biz/personal/family)
+✔ create fullName return
 
-  create array list that contains all existing contacts
+✔ birth month, context (biz/personal/family)
+
+ create array list that contains all existing contacts
 
   create phone class
 
