@@ -12,13 +12,17 @@
 
 ✔ create phone class
 ✔  add getter
-  add setter
+✔  add setter
 
-  create email class
+✔ create email class
+✔  add getter
+✔  add setter
 
-  create mailing addresses class
-
-  add phonenumber(s), email(s), mailing addresses
+✔  create mailing addresses class
+      street
+      city
+      state
+      zip
 
   select an existing contact VTE functionality: and add information:
 
