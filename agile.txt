@@ -8,7 +8,7 @@
 
 ✔ birth month,
 
-  context (biz/personal/family)
+✔ context (biz/personal/family)
 
   create phone class
 
