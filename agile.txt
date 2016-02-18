@@ -1,5 +1,6 @@
 //doing
 
+//done
 ✔ create Contact:  first name, last name
 
 ✔ create fullName return
@@ -19,28 +20,24 @@
 ✔  add setter
 
 ✔  create mailing addresses class
-      street
-      city
-      state
-      zip
+✔      street
+✔      city
+✔      state
+✔      zip
 
 ✔   get and set id for contact object creation and parsing
 
-  get and set id for phone object creation and parsing
-  get and set id for email object creation and parsing
-  get and set id for address object creation and parsing
+✔  get and set id for phone object creation and parsing
+✔  get and set id for email object creation and parsing
+✔  get and set id for address object creation and parsing
 
 
 
-    add phone into contact object
+✔    add phone into contact object
 
 
-    add email objects into contact object
+✔    add email objects into contact object
 
-
-
-
-//done
 
 
 //backlog

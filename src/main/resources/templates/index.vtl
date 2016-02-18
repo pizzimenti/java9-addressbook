@@ -1,0 +1,28 @@
+<h1>Address Book</h1>
+
+<div class="row">
+  <div class="col-md-4">
+    #if ($allContacts)
+      #foreach($contact in $allContacts)
+      <form action="/displayContact" method="post" id="$contact">
+        <input type="hidden" value="$contact.fullName()" name="chooseContact">
+        <li><a onclick="document.getElementById('$contact').submit(); return false;">$contact.fullName()</a></li>
+      </form>
+      #end
+    #end
+  </div>
+  <div class="col-md-8">
+    <h3>Add a Contact</h3>
+    <form action="/" method="post">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" class="form-control">
+      </div>
+      <button type="submit" name="button" class="btn btn-default" id="addContact">Submit</button>
+    </form>
+  </div>
+</div>
