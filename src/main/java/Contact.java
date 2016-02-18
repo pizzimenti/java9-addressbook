@@ -41,11 +41,14 @@ public class Contact {
     return mPhoneList;
   }
 
-  // public PhoneNumber getPhoneByID(int id){
-  //   for (int i; i <= counter; i++) {
-  //     if( id ==)
-  //   }
-  // }
+  public PhoneNumber getPhoneByID(int id){
+    for ( PhoneNumber numberObject : mPhoneList) {
+      if( id == numberObject.getID()) {
+        return numberObject;
+      }
+    }
+    return null;
+  }
 
 
   //Setters and Getters for Contact
