@@ -4,6 +4,7 @@ public class Contact {
   private String mFirstName;
   private String mLastName;
   private String mBirthMonth;
+  private String mContext;
   private static ArrayList<Contact> contactList = new ArrayList<Contact>();
 
 
@@ -17,6 +18,10 @@ public class Contact {
     return mFirstName + " " + mLastName;
   }
 
+  public static ArrayList<Contact> all() {
+    return contactList;
+  }
+
   public void setBirthMonth(String month) {
     mBirthMonth = month;
   }
@@ -25,8 +30,12 @@ public class Contact {
     return mBirthMonth;
   }
 
-  public static ArrayList<Contact> all() {
-    return contactList;
+  public void setContext(String context) {
+    mContext = context;
+  }
+
+  public String getContext() {
+    return mContext;
   }
 
 } //end of Contact Class

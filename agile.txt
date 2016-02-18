@@ -4,9 +4,11 @@
 
 ✔ create fullName return
 
-✔ birth month, context (biz/personal/family)
+✔ create array list that contains all existing contacts
 
- create array list that contains all existing contacts
+✔ birth month,
+
+  context (biz/personal/family)
 
   create phone class
 

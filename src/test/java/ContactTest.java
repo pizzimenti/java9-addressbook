@@ -19,6 +19,14 @@ public class ContactTest {
   }
 
   @Test
+  public void all_returnsArrayListofAllContacts_true() {
+    Contact testContact1 = new Contact("Mary","Smith");
+    Contact testContact2 = new Contact("John","Smith");
+    assertTrue(Contact.all().contains(testContact1));
+    assertTrue(Contact.all().contains(testContact2));
+  }
+
+  @Test
   public void getBirthMonth_addToContactObject_february() {
     Contact testContact = new Contact("Mary","Smith");
     testContact.setBirthMonth("February");
@@ -26,11 +34,10 @@ public class ContactTest {
   }
 
   @Test
-  public void all_returnsArrayListofAllContacts_true() {
-    Contact testContact1 = new Contact("Mary","Smith");
-    Contact testContact2 = new Contact("John","Smith");
-    assertTrue(Contact.all().contains(testContact1));
-    assertTrue(Contact.all().contains(testContact2));
+  public void getContext_addToContactObject_family() {
+    Contact testContact = new Contact("Mary","Smith");
+    testContact.setContext("family");
+    assertEquals("family", testContact.getContext());
   }
 
 } //end of ContactTest
