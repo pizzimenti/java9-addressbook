@@ -1,0 +1,12 @@
+body {
+  background-color: #29264d;
+  color: white;
+}
+
+#right-col {
+    border-left: 4px solid #494573;
+}
+
+input[type="text"], textarea {
+  background-color: #c9c3e6;
+}
