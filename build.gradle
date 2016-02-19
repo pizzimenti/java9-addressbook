@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBaseName = "addybook"
+archivesBaseName = "addressBook"
 version = '1.0'
 applicationName = "addressBook"
 mainClassName = "App"

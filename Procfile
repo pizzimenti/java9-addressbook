@@ -1,1 +1,1 @@
-web: ./build/install/addybook/bin/addressBook
+web: ./build/install/addressBook/bin/addressBook
