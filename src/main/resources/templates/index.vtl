@@ -4,10 +4,13 @@
   <div class="col-md-4">
     #if ($allContacts)
       #foreach($contact in $allContacts)
-      <form action="/displayContact" method="post" id="$contact">
-        <input type="hidden" value="$contact.fullName()" name="chooseContact">
-        <li><a onclick="document.getElementById('$contact').submit(); return false;">$contact.fullName()</a></li>
-      </form>
+        <form action="/displayContact" method="post" id="$contact.getID()">
+          <input type="hidden" value="$contact.getID()" name="chooseContact">
+          <li><a onclick="document.getElementById('$contact.getID()').submit(); return false;">$contact.fullName()</a></li>
+        </form>
+        #foreach($phoneNum in $contact.getPhoneNumbers())
+          $phoneNum.getPhoneNumber() -  $phoneNum.getPhoneType()<br/>
+        #end
       #end
     #end
   </div>
@@ -24,5 +27,20 @@
       </div>
       <button type="submit" name="button" class="btn btn-default" id="addContact">Submit</button>
     </form>
+    #if ($selectedContact)
+    <h3>Add a Phone Number</h3>
+    <form action="/newPhone" method="post">
+      <input type="hidden" value="$selectedContact.getID()" name="selectedContact">
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" name="phoneNumber" id="phoneNumber" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="phoneType">Type:</label>
+        <input type="text" name="phoneType" id="phoneType" class="form-control">
+      </div>
+      <button type="submit" name="button" class="btn btn-default" id="addPhone">Submit</button>
+    </form>
+    #end
   </div>
 </div>

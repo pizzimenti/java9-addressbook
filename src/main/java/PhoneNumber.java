@@ -15,6 +15,10 @@ public class PhoneNumber {
     return mNumber;
   }
 
+  public String getPhoneType() {
+    return mType;
+  }
+
   public int getID() {
     return mID;
   }

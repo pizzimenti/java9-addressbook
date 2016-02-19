@@ -41,4 +41,17 @@ public class AppTest extends FluentTest {
     submit("#addContact");
     assertThat(pageSource()).contains("Addy Books");
   }
+
+  @Test
+  public void addMultipleContactTest() {
+    goTo("http://localhost:4567");
+    fill("#firstName").with("Addy");
+    fill("#lastName").with("Books");
+    submit("#addContact");
+    fill("#firstName").with("Baby");
+    fill("#lastName").with("Boy");
+    submit("#addContact");
+    assertThat(pageSource()).contains("Addy Books");
+    assertThat(pageSource()).contains("Baby Boy");
+  }
 }
