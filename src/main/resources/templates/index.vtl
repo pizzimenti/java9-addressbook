@@ -6,7 +6,7 @@
       #foreach($contact in $allContacts)
         <form action="/displayContact" method="post" id="$contact.getID()">
           <input type="hidden" value="$contact.getID()" name="chooseContact">
-          <li><a onclick="document.getElementById('$contact.getID()').submit(); return false;">$contact.fullName()</a></li>
+          <li><button class="btn btn-default" onclick="document.getElementById('$contact.getID()').submit(); return false;">$contact.fullName()</button></li>
         </form>
         #foreach($phoneNum in $contact.getPhoneNumbers())
           $phoneNum.getPhoneNumber() -  $phoneNum.getPhoneType()<br/>
